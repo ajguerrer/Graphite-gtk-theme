@@ -5,7 +5,7 @@
    version="1.1"
    viewBox="0 0 508 285.75"
    id="svg100"
-   sodipodi:docname="wallpaper-wave-nord.svg"
+   sodipodi:docname="wallpaper-wave-stonerose.svg"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    inkscape:export-filename="/home/vince/Documents/GitHub/Graphite-gtk-theme/wallpaper/wallpaper-wave.png"
    inkscape:export-xdpi="192"
@@ -99,7 +99,7 @@
     </clipPath>
   </defs>
   <g
-     id="wave-light-nord">
+     id="wave-light-stonerose">
     <rect
        x="0"
        y="0"
@@ -148,7 +148,7 @@
     </g>
   </g>
   <g
-     id="wave-Dark-nord"
+     id="wave-Dark-stonerose"
      transform="translate(0,484.46747)">
     <rect
        x="0"
@@ -188,11 +188,11 @@
     </g>
   </g>
   <g
-     id="wave-light-nord-arch">
+     id="wave-light-stonerose-arch">
     <use
        x="0"
        y="0"
-       xlink:href="#wave-light-nord"
+       xlink:href="#wave-light-stonerose"
        id="use20286"
        transform="translate(613.8847)"
        width="100%"
@@ -214,12 +214,12 @@
     </g>
   </g>
   <g
-     id="wave-Dark-nord-arch"
+     id="wave-Dark-stonerose-arch"
      transform="translate(0,145.34314)">
     <use
        x="0"
        y="0"
-       xlink:href="#wave-Dark-nord"
+       xlink:href="#wave-Dark-stonerose"
        id="use20288"
        transform="translate(613.8847,-145.34314)"
        width="100%"
@@ -241,11 +241,11 @@
     </g>
   </g>
   <g
-     id="wave-light-nord-manjaro">
+     id="wave-light-stonerose-manjaro">
     <use
        x="0"
        y="0"
-       xlink:href="#wave-light-nord"
+       xlink:href="#wave-light-stonerose"
        id="use20302"
        transform="translate(1227.3873)"
        width="100%"
@@ -273,12 +273,12 @@
     </g>
   </g>
   <g
-     id="wave-Dark-nord-manjaro"
+     id="wave-Dark-stonerose-manjaro"
      transform="translate(0,145.34314)">
     <use
        x="0"
        y="0"
-       xlink:href="#wave-Dark-nord"
+       xlink:href="#wave-Dark-stonerose"
        id="use20312"
        transform="translate(1227.3873,-145.34314)"
        width="100%"
@@ -306,11 +306,11 @@
     </g>
   </g>
   <g
-     id="wave-light-nord-ubuntu">
+     id="wave-light-stonerose-ubuntu">
     <use
        x="0"
        y="0"
-       xlink:href="#wave-light-nord"
+       xlink:href="#wave-light-stonerose"
        id="use30895"
        transform="translate(1842.5435)"
        width="100%"
@@ -336,12 +336,12 @@
     </g>
   </g>
   <g
-     id="wave-Dark-nord-ubuntu"
+     id="wave-Dark-stonerose-ubuntu"
      transform="translate(0,145.34314)">
     <use
        x="0"
        y="0"
-       xlink:href="#wave-Dark-nord"
+       xlink:href="#wave-Dark-stonerose"
        id="use30897"
        transform="translate(1842.5435,-145.34314)"
        width="100%"
@@ -367,11 +367,11 @@
     </g>
   </g>
   <g
-     id="wave-light-nord-fedora">
+     id="wave-light-stonerose-fedora">
     <use
        x="0"
        y="0"
-       xlink:href="#wave-light-nord"
+       xlink:href="#wave-light-stonerose"
        id="use56060"
        transform="translate(2466.9519)"
        width="100%"
@@ -392,12 +392,12 @@
     </g>
   </g>
   <g
-     id="wave-Dark-nord-fedora"
+     id="wave-Dark-stonerose-fedora"
      transform="translate(0,145.34314)">
     <use
        x="0"
        y="0"
-       xlink:href="#wave-Dark-nord"
+       xlink:href="#wave-Dark-stonerose"
        id="use56062"
        transform="translate(2466.9519,-145.34314)"
        width="100%"
@@ -418,11 +418,11 @@
     </g>
   </g>
   <g
-     id="wave-light-nord-debian">
+     id="wave-light-stonerose-debian">
     <use
        x="0"
        y="0"
-       xlink:href="#wave-light-nord"
+       xlink:href="#wave-light-stonerose"
        id="use77294"
        transform="translate(3120.5929)"
        width="100%"
@@ -449,12 +449,12 @@
     </g>
   </g>
   <g
-     id="wave-Dark-nord-debian"
+     id="wave-Dark-stonerose-debian"
      transform="translate(0,145.34314)">
     <use
        x="0"
        y="0"
-       xlink:href="#wave-Dark-nord"
+       xlink:href="#wave-Dark-stonerose"
        id="use77296"
        transform="translate(3120.5929,-145.34314)"
        width="100%"
@@ -481,7 +481,7 @@
     </g>
   </g>
   <g
-     id="wave-color-nord"
+     id="wave-color-stonerose"
      transform="translate(0,991.36344)">
     <rect
        x="0"

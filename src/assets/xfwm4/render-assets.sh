@@ -15,28 +15,28 @@ LIGHT_HD_ASSETS_DIR="assets-Light-hdpi"
 LIGHT_XHD_ASSETS_DIR="assets-Light-xhdpi"
 LIGHT_SRC_FILE="assets-Light.svg"
 
-NORD_ASSETS_DIR="assets-nord"
-NORD_HD_ASSETS_DIR="assets-nord-hdpi"
-NORD_XHD_ASSETS_DIR="assets-nord-xhdpi"
-NORD_SRC_FILE="assets-nord.svg"
+STONEROSE_ASSETS_DIR="assets-stonerose"
+STONEROSE_HD_ASSETS_DIR="assets-stonerose-hdpi"
+STONEROSE_XHD_ASSETS_DIR="assets-stonerose-xhdpi"
+STONEROSE_SRC_FILE="assets-stonerose.svg"
 
-NORD_LIGHT_ASSETS_DIR="assets-Light-nord"
-NORD_LIGHT_HD_ASSETS_DIR="assets-Light-nord-hdpi"
-NORD_LIGHT_XHD_ASSETS_DIR="assets-Light-nord-xhdpi"
-NORD_LIGHT_SRC_FILE="assets-Light-nord.svg"
+STONEROSE_LIGHT_ASSETS_DIR="assets-Light-stonerose"
+STONEROSE_LIGHT_HD_ASSETS_DIR="assets-Light-stonerose-hdpi"
+STONEROSE_LIGHT_XHD_ASSETS_DIR="assets-Light-stonerose-xhdpi"
+STONEROSE_LIGHT_SRC_FILE="assets-Light-stonerose.svg"
 
 [[ -d $ASSETS_DIR ]] && rm -rf $ASSETS_DIR
 [[ -d $LIGHT_ASSETS_DIR ]] && rm -rf $LIGHT_ASSETS_DIR
-[[ -d $NORD_ASSETS_DIR ]] && rm -rf $NORD_ASSETS_DIR
-[[ -d $NORD_LIGHT_ASSETS_DIR ]] && rm -rf $NORD_LIGHT_ASSETS_DIR
+[[ -d $STONEROSE_ASSETS_DIR ]] && rm -rf $STONEROSE_ASSETS_DIR
+[[ -d $STONEROSE_LIGHT_ASSETS_DIR ]] && rm -rf $STONEROSE_LIGHT_ASSETS_DIR
 [[ -d $HD_ASSETS_DIR ]] && rm -rf $HD_ASSETS_DIR
 [[ -d $LIGHT_HD_ASSETS_DIR ]] && rm -rf $LIGHT_HD_ASSETS_DIR
-[[ -d $NORD_HD_ASSETS_DIR ]] && rm -rf $NORD_HD_ASSETS_DIR
-[[ -d $NORD_LIGHT_HD_ASSETS_DIR ]] && rm -rf $NORD_LIGHT_HD_ASSETS_DIR
+[[ -d $STONEROSE_HD_ASSETS_DIR ]] && rm -rf $STONEROSE_HD_ASSETS_DIR
+[[ -d $STONEROSE_LIGHT_HD_ASSETS_DIR ]] && rm -rf $STONEROSE_LIGHT_HD_ASSETS_DIR
 [[ -d $XHD_ASSETS_DIR ]] && rm -rf $XHD_ASSETS_DIR
 [[ -d $LIGHT_XHD_ASSETS_DIR ]] && rm -rf $LIGHT_XHD_ASSETS_DIR
-[[ -d $NORD_XHD_ASSETS_DIR ]] && rm -rf $NORD_XHD_ASSETS_DIR
-[[ -d $NORD_LIGHT_XHD_ASSETS_DIR ]] && rm -rf $NORD_LIGHT_XHD_ASSETS_DIR
+[[ -d $STONEROSE_XHD_ASSETS_DIR ]] && rm -rf $STONEROSE_XHD_ASSETS_DIR
+[[ -d $STONEROSE_LIGHT_XHD_ASSETS_DIR ]] && rm -rf $STONEROSE_LIGHT_XHD_ASSETS_DIR
 if [[ $# -eq 1 && "$1" = "clean" ]]; then 
   exit
 fi
@@ -70,27 +70,27 @@ else
     && $OPTIPNG -o7 --quiet $LIGHT_ASSETS_DIR/$i.png 
 fi
 
-mkdir -p $NORD_ASSETS_DIR
-if [ -f $NORD_ASSETS_DIR/$i.png ]; then
-    echo $NORD_ASSETS_DIR/$i.png exists.
+mkdir -p $STONEROSE_ASSETS_DIR
+if [ -f $STONEROSE_ASSETS_DIR/$i.png ]; then
+    echo $STONEROSE_ASSETS_DIR/$i.png exists.
 else
     echo
-    echo Rendering $NORD_ASSETS_DIR/$i.png
+    echo Rendering $STONEROSE_ASSETS_DIR/$i.png
     $INKSCAPE --export-id=$i \
               --export-id-only \
-              --export-filename=$NORD_ASSETS_DIR/$i.png $NORD_SRC_FILE >/dev/null \
-    && $OPTIPNG -o7 --quiet $NORD_ASSETS_DIR/$i.png 
+              --export-filename=$STONEROSE_ASSETS_DIR/$i.png $STONEROSE_SRC_FILE >/dev/null \
+    && $OPTIPNG -o7 --quiet $STONEROSE_ASSETS_DIR/$i.png 
 fi
-mkdir -p $NORD_LIGHT_ASSETS_DIR
-if [ -f $NORD_LIGHT_ASSETS_DIR/$i.png ]; then
-    echo $NORD_LIGHT_ASSETS_DIR/$i.png exists.
+mkdir -p $STONEROSE_LIGHT_ASSETS_DIR
+if [ -f $STONEROSE_LIGHT_ASSETS_DIR/$i.png ]; then
+    echo $STONEROSE_LIGHT_ASSETS_DIR/$i.png exists.
 else
     echo
-    echo Rendering $NORD_LIGHT_ASSETS_DIR/$i.png
+    echo Rendering $STONEROSE_LIGHT_ASSETS_DIR/$i.png
     $INKSCAPE --export-id=$i \
               --export-id-only \
-              --export-filename=$NORD_LIGHT_ASSETS_DIR/$i.png $NORD_LIGHT_SRC_FILE >/dev/null \
-    && $OPTIPNG -o7 --quiet $NORD_LIGHT_ASSETS_DIR/$i.png 
+              --export-filename=$STONEROSE_LIGHT_ASSETS_DIR/$i.png $STONEROSE_LIGHT_SRC_FILE >/dev/null \
+    && $OPTIPNG -o7 --quiet $STONEROSE_LIGHT_ASSETS_DIR/$i.png 
 fi
 
 # HDPI
@@ -119,29 +119,29 @@ else
     && $OPTIPNG -o7 --quiet $LIGHT_HD_ASSETS_DIR/$i.png 
 fi
 
-mkdir -p $NORD_HD_ASSETS_DIR
-if [ -f $NORD_HD_ASSETS_DIR/$i.png ]; then
-    echo $NORD_HD_ASSETS_DIR/$i.png exists.
+mkdir -p $STONEROSE_HD_ASSETS_DIR
+if [ -f $STONEROSE_HD_ASSETS_DIR/$i.png ]; then
+    echo $STONEROSE_HD_ASSETS_DIR/$i.png exists.
 else
     echo
-    echo Rendering $NORD_HD_ASSETS_DIR/$i.png
+    echo Rendering $STONEROSE_HD_ASSETS_DIR/$i.png
     $INKSCAPE --export-id=$i \
               --export-id-only \
               --export-dpi=144 \
-              --export-filename=$NORD_HD_ASSETS_DIR/$i.png $NORD_SRC_FILE >/dev/null \
-    && $OPTIPNG -o7 --quiet $NORD_HD_ASSETS_DIR/$i.png 
+              --export-filename=$STONEROSE_HD_ASSETS_DIR/$i.png $STONEROSE_SRC_FILE >/dev/null \
+    && $OPTIPNG -o7 --quiet $STONEROSE_HD_ASSETS_DIR/$i.png 
 fi
-mkdir -p $NORD_LIGHT_HD_ASSETS_DIR
-if [ -f $NORD_LIGHT_HD_ASSETS_DIR/$i.png ]; then
-    echo $NORD_LIGHT_HD_ASSETS_DIR/$i.png exists.
+mkdir -p $STONEROSE_LIGHT_HD_ASSETS_DIR
+if [ -f $STONEROSE_LIGHT_HD_ASSETS_DIR/$i.png ]; then
+    echo $STONEROSE_LIGHT_HD_ASSETS_DIR/$i.png exists.
 else
     echo
-    echo Rendering $NORD_LIGHT_HD_ASSETS_DIR/$i.png
+    echo Rendering $STONEROSE_LIGHT_HD_ASSETS_DIR/$i.png
     $INKSCAPE --export-id=$i \
               --export-id-only \
               --export-dpi=144 \
-              --export-filename=$NORD_LIGHT_HD_ASSETS_DIR/$i.png $NORD_LIGHT_SRC_FILE >/dev/null \
-    && $OPTIPNG -o7 --quiet $NORD_LIGHT_HD_ASSETS_DIR/$i.png 
+              --export-filename=$STONEROSE_LIGHT_HD_ASSETS_DIR/$i.png $STONEROSE_LIGHT_SRC_FILE >/dev/null \
+    && $OPTIPNG -o7 --quiet $STONEROSE_LIGHT_HD_ASSETS_DIR/$i.png 
 fi
 
 # XHDPI
@@ -170,29 +170,29 @@ else
     && $OPTIPNG -o7 --quiet $LIGHT_XHD_ASSETS_DIR/$i.png 
 fi
 
-mkdir -p $NORD_XHD_ASSETS_DIR
-if [ -f $NORD_XHD_ASSETS_DIR/$i.png ]; then
-    echo $NORD_XHD_ASSETS_DIR/$i.png exists.
+mkdir -p $STONEROSE_XHD_ASSETS_DIR
+if [ -f $STONEROSE_XHD_ASSETS_DIR/$i.png ]; then
+    echo $STONEROSE_XHD_ASSETS_DIR/$i.png exists.
 else
     echo
-    echo Rendering $NORD_XHD_ASSETS_DIR/$i.png
+    echo Rendering $STONEROSE_XHD_ASSETS_DIR/$i.png
     $INKSCAPE --export-id=$i \
               --export-id-only \
               --export-dpi=192 \
-              --export-filename=$NORD_XHD_ASSETS_DIR/$i.png $NORD_SRC_FILE >/dev/null \
-    && $OPTIPNG -o7 --quiet $NORD_XHD_ASSETS_DIR/$i.png 
+              --export-filename=$STONEROSE_XHD_ASSETS_DIR/$i.png $STONEROSE_SRC_FILE >/dev/null \
+    && $OPTIPNG -o7 --quiet $STONEROSE_XHD_ASSETS_DIR/$i.png 
 fi
-mkdir -p $NORD_LIGHT_XHD_ASSETS_DIR
-if [ -f $NORD_LIGHT_XHD_ASSETS_DIR/$i.png ]; then
-    echo $NORD_LIGHT_XHD_ASSETS_DIR/$i.png exists.
+mkdir -p $STONEROSE_LIGHT_XHD_ASSETS_DIR
+if [ -f $STONEROSE_LIGHT_XHD_ASSETS_DIR/$i.png ]; then
+    echo $STONEROSE_LIGHT_XHD_ASSETS_DIR/$i.png exists.
 else
     echo
-    echo Rendering $NORD_LIGHT_XHD_ASSETS_DIR/$i.png
+    echo Rendering $STONEROSE_LIGHT_XHD_ASSETS_DIR/$i.png
     $INKSCAPE --export-id=$i \
               --export-id-only \
               --export-dpi=192 \
-              --export-filename=$NORD_LIGHT_XHD_ASSETS_DIR/$i.png $NORD_LIGHT_SRC_FILE >/dev/null \
-    && $OPTIPNG -o7 --quiet $NORD_LIGHT_XHD_ASSETS_DIR/$i.png 
+              --export-filename=$STONEROSE_LIGHT_XHD_ASSETS_DIR/$i.png $STONEROSE_LIGHT_SRC_FILE >/dev/null \
+    && $OPTIPNG -o7 --quiet $STONEROSE_LIGHT_XHD_ASSETS_DIR/$i.png 
 fi
 
 done

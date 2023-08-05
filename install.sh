@@ -91,11 +91,11 @@ OPTIONS:
 
   -u, --uninstall         Uninstall themes or link for libadwaita
 
-  --tweaks                Specify versions for tweaks [nord|black|darker|rimless|normal]
-                          (WORRING: 'nord' and 'darker' can not mix use with 'black'!)
-                          1. nord       Nord colorscheme version
+  --tweaks                Specify versions for tweaks [stonerose|black|darker|rimless|normal]
+                          (WORRING: 'stonerose' and 'darker' can not mix use with 'black'!)
+                          1. stonerose  Nord colorscheme version
                           2. black      Blackness colorscheme version
-                          3. darker     Darker (default|nord) color version (black option can not be darker)
+                          3. darker     Darker (default|stonerose) color version (black option can not be darker)
                           4. rimless    Remove the 2px outline about windows and menus
                           5. normal     Normal sidebar style (Nautilus)
                           6. float      Float gnome-shell panel style
@@ -500,9 +500,9 @@ while [[ $# -gt 0 ]]; do
       shift
       for variant in $@; do
         case "$variant" in
-          nord)
-            nord="true"
-            ctype="-nord"
+          stonerose)
+            stonerose="true"
+            ctype="-stonerose"
             echo -e "Install Nord version! ..."
             shift
             ;;
@@ -588,8 +588,8 @@ compact_size() {
   sed -i "/\$compact:/s/false/true/" ${SRC_DIR}/sass/_tweaks-temp.scss
 }
 
-nord_color() {
-  sed -i "/\$color_type:/s/default/nord/" ${SRC_DIR}/sass/_tweaks-temp.scss
+stonerose_color() {
+  sed -i "/\$color_type:/s/default/stonerose/" ${SRC_DIR}/sass/_tweaks-temp.scss
 }
 
 blackness_color() {
@@ -665,8 +665,8 @@ theme_tweaks() {
     compact_size
   fi
 
-  if [[ "$nord" = "true" ]] ; then
-    nord_color
+  if [[ "$stonerose" = "true" ]] ; then
+    stonerose_color
   fi
 
   if [[ "$blackness" = "true" ]] ; then
@@ -746,7 +746,7 @@ clean_theme() {
   for theme in "${THEME_VARIANTS[@]}"; do
     for color in '' '-light' '-dark'; do
       for size in "${SIZE_VARIANTS[@]}"; do
-        for type in '' '-nord'; do
+        for type in '' '-stonerose'; do
           clean "${dest:-$DEST_DIR}" "${name:-$THEME_NAME}" "$theme" "$color" "$size" "$type"
         done
       done

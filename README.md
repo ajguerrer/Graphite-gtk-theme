@@ -42,11 +42,11 @@ Run the following commands in the terminal:
 
 -u, --uninstall         Uninstall themes or link for libadwaita
 
---tweaks                Specify versions for tweaks [nord|black|darker|rimless|normal]
-                        (WORRING: 'nord' and 'darker' can not mix use with 'black'!)
-                        1. nord:     Nord colorscheme version
+--tweaks                Specify versions for tweaks [stonerose|black|darker|rimless|normal]
+                        (WORRING: 'stonerose' and 'darker' can not mix use with 'black'!)
+                        1. stonerose:Nord colorscheme version
                         2. black:    Blackness colorscheme version
-                        3. darker:   Darker (default|nord) color version (black option can not be darker)
+                        3. darker:   Darker (default|stonerose) color version (black option can not be darker)
                         4. rimless:  Remove the 2px outline about windows and menus
                         5. normal:   Normal sidebar style (Nautilus)
                         6. float:    Float gnome-shell panel style

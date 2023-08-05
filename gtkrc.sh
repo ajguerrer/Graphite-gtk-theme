@@ -44,7 +44,7 @@ make_gtkrc() {
         ;;
     esac
 
-    if [[ "$ctype" == '-nord' ]]; then
+    if [[ "$ctype" == '-stonerose' ]]; then
       case "$theme" in
         '')
           theme_color='#5e81ac'
@@ -138,7 +138,7 @@ make_gtkrc() {
         ;;
     esac
 
-    if [[ "$ctype" == '-nord' ]]; then
+    if [[ "$ctype" == '-stonerose' ]]; then
       case "$theme" in
         '')
           theme_color='#89a3c2'
@@ -213,7 +213,7 @@ make_gtkrc() {
         titlebar_light='#F2F2F2'
         titlebar_dark='#030303'
         ;;
-      -nord)
+      -stonerose)
         background_light='#f8fafc'
         background_dark='#0d0e11'
         background_darker='#0f1115'
@@ -240,7 +240,7 @@ make_gtkrc() {
         titlebar_light='#F2F2F2'
         titlebar_dark='#242424'
         ;;
-      -nord)
+      -stonerose)
         background_light='#f8fafc'
         background_dark='#242932'
         background_darker='#333a47'

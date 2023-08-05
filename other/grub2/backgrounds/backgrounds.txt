@@ -1,4 +1,4 @@
 wave-light
 wave-dark
-wave-light-nord
-wave-dark-nord
+wave-light-stonerose
+wave-dark-stonerose

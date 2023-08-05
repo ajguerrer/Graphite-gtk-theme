@@ -15,7 +15,7 @@ REO_DIR="$(cd $(dirname $0) && pwd)"
 }
 
 name=Graphite
-THEME_VARIANTS=('' 'nord')
+THEME_VARIANTS=('' 'stonerose')
 SCREEN_VARIANTS=('1080p' '2k' '4k')
 
 #COLORS
@@ -57,7 +57,7 @@ usage() {
   printf "\n%s\n" "OPTIONS:"
   printf "  %-25s%s\n" "-d, --dest" "Specify destination directory (Default: $DEST_DIR)"
   printf "  %-25s%s\n" "-b, --boot" "Install grub theme into /boot/grub/themes"
-  printf "  %-25s%s\n" "-t, --theme" "Color theme variant(s) [default|nord] (default is grey color)"
+  printf "  %-25s%s\n" "-t, --theme" "Color theme variant(s) [default|stonerose] (default is grey color)"
   printf "  %-25s%s\n" "-s, --screen" "Screen display variant(s) [1080p|2k|4k] (default is 1080p)"
   printf "  %-25s%s\n" "-r, --remove" "Remove theme (must add theme name option)"
   printf "  %-25s%s\n" "-j, --justcopy" "Just copy the theme files, without setting the theme system wide"
@@ -70,8 +70,8 @@ install() {
 
   local THEME_DIR="${DEST_DIR}/${name}${theme}"
 
-  if [[ "$theme" == "nord" ]]; then
-    local COLORSCHEME="-nord"
+  if [[ "$theme" == "stonerose" ]]; then
+    local COLORSCHEME="-stonerose"
   fi
 
   # Check for root access and proceed if it is present
@@ -312,7 +312,7 @@ while [[ $# -gt 0 ]]; do
             themes+=("${THEME_VARIANTS[0]}")
             shift
             ;;
-          nord)
+          stonerose)
             themes+=("${THEME_VARIANTS[1]}")
             shift
             ;;

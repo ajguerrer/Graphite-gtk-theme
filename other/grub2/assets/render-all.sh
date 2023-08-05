@@ -3,7 +3,7 @@
 set -e
 
 THEMES=("logos" "assets")
-COLORS=("" "-nord")
+COLORS=("" "-stonerose")
 RESOLUTIONS=("1080p" "2k" "4k")
 
 for theme in "${THEMES[@]}"; do

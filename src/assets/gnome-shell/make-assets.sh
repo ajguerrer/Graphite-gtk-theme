@@ -7,7 +7,7 @@ INKSCAPE="$(command -v inkscape)" || true
 OPTIPNG="$(command -v optipng)" || true
 
 for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-blue'; do
-  for type in '' '-nord'; do
+  for type in '' '-stonerose'; do
     if [[ "$type" != '' ]]; then
       rm -rf "theme${theme}${type}"
     elif [[ "$theme" != '' ]]; then
@@ -16,7 +16,7 @@ for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-
   done
 done
 for color in '-Light' '-Dark'; do
-  for type in '' '-nord'; do
+  for type in '' '-stonerose'; do
     rm -f "background${color}${type}.png"
   done
 done
@@ -26,7 +26,7 @@ if [[ $# -eq 1 && "$1" = "clean" ]]; then
 fi
 
 for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-blue'; do
-  for type in '' '-nord'; do
+  for type in '' '-stonerose'; do
     case "$theme" in
       '')
         theme_color_dark='#333333'
@@ -66,7 +66,7 @@ for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-
         ;;
     esac
 
-    if [[ "$type" == '-nord' ]]; then
+    if [[ "$type" == '-stonerose' ]]; then
       case "$theme" in
         '')
           theme_color_dark='#434c5e'
@@ -124,7 +124,7 @@ for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-
 done
 
 for color in '-Light' '-Dark'; do
-  for type in '' '-nord'; do
+  for type in '' '-stonerose'; do
     echo "Rendering 'background pictures ...'"
 
     if [[ -n "${RENDER_SVG}" ]]; then

@@ -14,7 +14,7 @@ $theme_green_color:   if($variant == 'light', $green-500, $green-400);
 $theme_teal_color:    if($variant == 'light', $teal-500, $teal-300);
 $theme_blue_color:    if($variant == 'light', #3684dd, #5294e2);
 
-@if $color_type == 'nord' {
+@if $color_type == 'stonerose' {
   $theme_default_color: if($variant == 'light', #434c5e, #dbdee5);
   $theme_purple_color:  if($variant == 'light', #b57daa, #c89dbf);
   $theme_pink_color:    if($variant == 'light', #cd7092, #dc98b1);
@@ -80,7 +80,7 @@ $theme_blue_color:    if($variant == 'light', #3684dd, #5294e2);
 }
 
 @function background($type) {
-  @if ($color_type == 'nord') {
+  @if ($color_type == 'stonerose') {
     @if ($type == 'a') { @return #f9fafb; }
     @if ($type == 'b') { @return #f3f4f6; }
     @if ($type == 'c') { @return #f0f1f4; }
@@ -145,8 +145,8 @@ $indicator:                             theme(color);
 $titlebar-indicator:                    if($variant == 'dark', currentColor, $primary);
 $inverse-indicator:                     if($theme == 'default', white, $primary);
 $applet-primary:                        if($topbar == 'dark' and $theme == 'default' and $variant == 'light', #DDDDDD, $primary);
-$titlebar-primary:                      if($topbar == 'dark' and $theme == 'default' and $variant == 'light', if($color_type == 'nord', #dbdee5, #e0e0e0), $primary);
-$osd-primary:                           if($theme == 'default', if($color_type == 'nord', #dbdee5, #e0e0e0), $primary);
+$titlebar-primary:                      if($topbar == 'dark' and $theme == 'default' and $variant == 'light', if($color_type == 'stonerose', #dbdee5, #e0e0e0), $primary);
+$osd-primary:                           if($theme == 'default', if($color_type == 'stonerose', #dbdee5, #e0e0e0), $primary);
 
 $background:                            if($variant == 'light', background(a), background(g));
 $surface:                               if($variant == 'light', background(a), background(h));
