@@ -1,5 +1,23 @@
 #! /usr/bin/env bash
 
+set -e
+
+for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-blue'; do
+for color in '' '-Dark'; do
+for type in '' '-nord'; do
+  if [[ "$type" == '-nord' ]]; then
+    rm -f "assets${theme}${color}${type}.svg"
+  fi
+  if [[ "$theme" != '' ]]; then
+    rm -f "assets${theme}${color}.svg"
+  fi
+done
+done
+done
+if [[ $# -eq 1 && "$1" = "clean" ]]; then 
+  exit
+fi
+
 for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-blue'; do
 for color in '' '-Dark'; do
 for type in '' '-nord'; do

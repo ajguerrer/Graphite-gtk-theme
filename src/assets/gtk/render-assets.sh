@@ -1,17 +1,25 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-RENDER_SVG="$(command -v rendersvg)" || true
+set -e
+
+RENDER_SVG="$(command -v resvg)" || true
 INKSCAPE="$(command -v inkscape)" || true
 OPTIPNG="$(command -v optipng)" || true
 
 INDEX="assets.txt"
 
 for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-blue' '-teal'; do
+  ASSETS_DIR="assets${theme}"
+  [[ -d $ASSETS_DIR ]] && rm -rf $ASSETS_DIR
+done
+if [[ $# -eq 1 && "$1" = "clean" ]]; then 
+  exit
+fi
 
+for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-blue' '-teal'; do
 ASSETS_DIR="assets${theme}"
 SRC_FILE="assets${theme}.svg"
 
-#[[ -d $ASSETS_DIR ]] && rm -rf $ASSETS_DIR
 mkdir -p $ASSETS_DIR
 
 for i in `cat $INDEX`; do

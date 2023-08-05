@@ -1,8 +1,29 @@
 #! /usr/bin/env bash
 
-RENDER_SVG="$(command -v rendersvg)" || true
+set -e
+
+RENDER_SVG="$(command -v resvg)" || true
 INKSCAPE="$(command -v inkscape)" || true
 OPTIPNG="$(command -v optipng)" || true
+
+for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-blue'; do
+  for type in '' '-nord'; do
+    if [[ "$type" != '' ]]; then
+      rm -rf "theme${theme}${type}"
+    elif [[ "$theme" != '' ]]; then
+      rm -rf "theme${theme}"
+    fi
+  done
+done
+for color in '-Light' '-Dark'; do
+  for type in '' '-nord'; do
+    rm -f "background${color}${type}.png"
+  done
+done
+
+if [[ $# -eq 1 && "$1" = "clean" ]]; then 
+  exit
+fi
 
 for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-blue'; do
   for type in '' '-nord'; do

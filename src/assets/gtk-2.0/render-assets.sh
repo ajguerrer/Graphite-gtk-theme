@@ -1,6 +1,8 @@
 #! /usr/bin/env bash
 
-RENDER_SVG="$(command -v rendersvg)" || true
+set -e
+
+RENDER_SVG="$(command -v resvg)" || true
 INKSCAPE="$(command -v inkscape)" || true
 OPTIPNG="$(command -v optipng)" || true
 
@@ -10,9 +12,29 @@ INDEX_THEME="assets-theme.txt"
 for color in '' '-Dark'; do
   for type in '' '-nord'; do
     ASSETS_DIR="assets-common${color}${type}"
+    [[ -d $ASSETS_DIR ]] && rm -rf $ASSETS_DIR
+  done
+done
+
+for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-blue'; do
+  for color in '' '-Dark'; do
+    for type in '' '-nord'; do
+      ASSETS_DIR="assets${theme}${color}${type}"
+      SRC_FILE="assets${theme}${color}${type}.svg"
+      [[ -d $ASSETS_DIR ]] && rm -rf $ASSETS_DIR
+    done
+  done
+done
+
+if [[ $# -eq 1 && "$1" = "clean" ]]; then 
+  exit
+fi
+
+for color in '' '-Dark'; do
+  for type in '' '-nord'; do
+    ASSETS_DIR="assets-common${color}${type}"
     SRC_FILE="assets-common${color}${type}.svg"
 
-    # [[ -d $ASSETS_DIR ]] && rm -rf $ASSETS_DIR
     mkdir -p $ASSETS_DIR
 
     for i in `cat $INDEX_COMMON`; do
@@ -42,7 +64,6 @@ for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-
       ASSETS_DIR="assets${theme}${color}${type}"
       SRC_FILE="assets${theme}${color}${type}.svg"
 
-      # [[ -d $ASSETS_DIR ]] && rm -rf $ASSETS_DIR
       mkdir -p $ASSETS_DIR
 
       for i in `cat $INDEX_THEME`; do

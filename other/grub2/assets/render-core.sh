@@ -1,7 +1,9 @@
-#!/bin/bash
+#! /usr/bin/env bash
 
-INKSCAPE="/usr/bin/inkscape"
-OPTIPNG="/usr/bin/optipng"
+set -e
+
+INKSCAPE="$(command -v inkscape)" || true
+OPTIPNG="$(command -v optipng)" || true
 
 if [[ "$1" == "assets" ]]; then
   INDEX="assets.txt"
@@ -25,7 +27,12 @@ else
   exit 1
 fi
 
-install -d "$ASSETS_DIR"
+[[ -d $ASSETS_DIR ]] && rm -rf $ASSETS_DIR
+if [[ $# -eq 4 && "$4" = "clean" ]]; then 
+  exit
+fi
+
+mkdir -p $ASSETS_DIR
 
 while read -r i; do
   if [[ -f "$ASSETS_DIR/$i.png" ]]; then

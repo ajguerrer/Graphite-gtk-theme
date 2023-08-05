@@ -1,7 +1,9 @@
-#!/bin/bash
+#! /usr/bin/env bash
 
-INKSCAPE="/usr/bin/inkscape"
-OPTIPNG="/usr/bin/optipng"
+set -e
+
+INKSCAPE="$(command -v inkscape)" || true
+OPTIPNG="$(command -v optipng)" || true
 
 INDEX="backgrounds.txt"
 SRC_FILE="backgrounds.svg"
@@ -20,7 +22,12 @@ else
   exit 1
 fi
 
-install -d "$BACKGROUNDS_DIR"
+[[ -d $BACKGROUNDS_DIR ]] && rm -rf $BACKGROUNDS_DIR
+if [[ $# -eq 2 && "$2" = "clean" ]]; then 
+  exit
+fi
+
+mkdir -p $BACKGROUNDS_DIR
 
 while read -r i; do
   if [[ -f "$BACKGROUNDS_DIR/$i.png" ]]; then

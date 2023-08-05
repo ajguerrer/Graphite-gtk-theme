@@ -1,4 +1,6 @@
-#!/bin/bash
+#! /usr/bin/env bash
+
+set -e
 
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
 WALLPAPER_DIR="$HOME/.local/share/backgrounds"
