@@ -47,31 +47,31 @@ make_gtkrc() {
     if [[ "$ctype" == '-stonerose' ]]; then
       case "$theme" in
         '')
-          theme_color='#5e81ac'
+          theme_color='#9DAEBF'
           ;;
         -purple)
-          theme_color='#b57daa'
+          theme_color='#AE9DBF'
           ;;
         -pink)
-          theme_color='#cd7092'
+          theme_color='#BF9BAE'
           ;;
         -red)
-          theme_color='#c35b65'
+          theme_color='#BF9D9D'
           ;;
         -orange)
-          theme_color='#d0846c'
+          theme_color='#BFAE9D'
           ;;
         -yellow)
-          theme_color='#e4b558'
+          theme_color='#BFAE9D'
           ;;
         -green)
-          theme_color='#82ac5d'
+          theme_color='#AEBF9D'
           ;;
         -teal)
-          theme_color='#83b9b8'
+          theme_color='#9DBFAE'
           ;;
         -grey)
-          theme_color='#3a4150'
+          theme_color='#B4B4BF'
           ;;
       esac
     fi
@@ -141,31 +141,31 @@ make_gtkrc() {
     if [[ "$ctype" == '-stonerose' ]]; then
       case "$theme" in
         '')
-          theme_color='#89a3c2'
+          theme_color='#9DAEBF'
           ;;
         -purple)
-          theme_color='#c89dbf'
+          theme_color='#AE9DBF'
           ;;
         -pink)
-          theme_color='#dc98b1'
+          theme_color='#BF9BAE'
           ;;
         -red)
-          theme_color='#d4878f'
+          theme_color='#BF9D9D'
           ;;
         -orange)
-          theme_color='#dca493'
+          theme_color='#BFAE9D'
           ;;
         -yellow)
-          theme_color='#eac985'
+          theme_color='#BFAE9D'
           ;;
         -green)
-          theme_color='#a0c082'
+          theme_color='#AEBF9D'
           ;;
         -teal)
-          theme_color='#83b9b8'
+          theme_color='#9DBFAE'
           ;;
         -grey)
-          theme_color='#d9dce3'
+          theme_color='#B4B4BF'
           ;;
       esac
     fi
@@ -214,12 +214,12 @@ make_gtkrc() {
         titlebar_dark='#030303'
         ;;
       -stonerose)
-        background_light='#f8fafc'
-        background_dark='#0d0e11'
-        background_darker='#0f1115'
-        background_alt='#1c1f26'
-        titlebar_light='#f0f1f4'
-        titlebar_dark='#020203'
+        background_light='#B4B4BF'
+        background_dark='#303033'
+        background_darker='#48484D'
+        background_alt='#303033'
+        titlebar_light='#CCCCD9'
+        titlebar_dark='#48484D'
         ;;
       -dracula)
         background_light='#f9f9fb'
@@ -241,12 +241,12 @@ make_gtkrc() {
         titlebar_dark='#242424'
         ;;
       -stonerose)
-        background_light='#f8fafc'
-        background_dark='#242932'
-        background_darker='#333a47'
-        background_alt='#3a4150'
-        titlebar_light='#f0f1f4'
-        titlebar_dark='#1e222a'
+        background_light='#B4B4BF'
+        background_dark='#303033'
+        background_darker='#48484D'
+        background_alt='#303033'
+        titlebar_light='#CCCCD9'
+        titlebar_dark='#48484D'
         ;;
       -dracula)
         background_light='#f9f9fb'

@@ -220,7 +220,7 @@
        rx="6.6032357"
        ry="6.6032357" />
     <rect
-       style="opacity:1;fill:#333a47;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="opacity:1;fill:#909099;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="select_c"
        width="19.049999"
        height="9.5249996"
@@ -228,11 +228,11 @@
        y="329.80832"
        ry="0.016929913" />
     <path
-       style="opacity:1;fill:#333a47;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="opacity:1;fill:#909099;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 159.79231,329.80938 c -0.72535,0.009 -1.3069,0.59441 -1.3069,1.32188 v 6.87917 c 0,0.72747 0.58155,1.31324 1.3069,1.32188 0.009,-8.4e-4 0.016,-0.007 0.016,-0.016 v -9.49089 c 0,-0.009 -0.007,-0.0152 -0.016,-0.016 z"
        id="select_w" />
     <path
-       style="opacity:1;fill:#333a47;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="opacity:1;fill:#909099;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 178.85833,329.80938 c -0.009,8.4e-4 -0.016,0.007 -0.016,0.016 v 9.49089 c 0,0.009 0.007,0.0152 0.016,0.016 0.72535,-0.009 1.30689,-0.59441 1.30689,-1.32188 v -6.87917 c 0,-0.72747 -0.58154,-1.31324 -1.30689,-1.32188 z"
        id="select_e" />
   </g>

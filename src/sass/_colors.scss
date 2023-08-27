@@ -15,15 +15,15 @@ $theme_teal_color:    if($variant == 'light', $teal-500, $teal-300);
 $theme_blue_color:    if($variant == 'light', #3684dd, #5294e2);
 
 @if $color_type == 'stonerose' {
-  $theme_default_color: if($variant == 'light', #434c5e, #dbdee5);
-  $theme_purple_color:  if($variant == 'light', #b57daa, #c89dbf);
-  $theme_pink_color:    if($variant == 'light', #cd7092, #dc98b1);
-  $theme_red_color:     if($variant == 'light', #c35b65, #d4878f);
-  $theme_orange_color:  if($variant == 'light', #d0846c, #dca493);
-  $theme_yellow_color:  if($variant == 'light', #e4b558, #eac985);
-  $theme_green_color:   if($variant == 'light', #82ac5d, #a0c082);
-  $theme_teal_color:    if($variant == 'light', #63a6a5, #83b9b8);
-  $theme_blue_color:    if($variant == 'light', #5e81ac, #89a3c2);
+  $theme_default_color: if($variant == 'light', #B4B4BF, #B4B4BF);
+  $theme_purple_color:  if($variant == 'light', #AE9DBF, #AE9DBF);
+  $theme_pink_color:    if($variant == 'light', #BF9BAE, #BF9BAE);
+  $theme_red_color:     if($variant == 'light', #BF9D9D, #BF9D9D);
+  $theme_orange_color:  if($variant == 'light', #BFAE9D, #BFAE9D);
+  $theme_yellow_color:  if($variant == 'light', #BFAE9D, #BFAE9D);
+  $theme_green_color:   if($variant == 'light', #AEBF9D, #AEBF9D);
+  $theme_teal_color:    if($variant == 'light', #9DBFAE, #9DBFAE);
+  $theme_blue_color:    if($variant == 'light', #9DAEBF, #9DAEBF);
 }
 
 @function gtkalpha($c, $a) {
@@ -81,21 +81,21 @@ $theme_blue_color:    if($variant == 'light', #3684dd, #5294e2);
 
 @function background($type) {
   @if ($color_type == 'stonerose') {
-    @if ($type == 'a') { @return #f9fafb; }
-    @if ($type == 'b') { @return #f3f4f6; }
-    @if ($type == 'c') { @return #f0f1f4; }
-    @if ($type == 'd') { @return #c4c9d4; }
+    @if ($type == 'a') { @return #B4B4BF; }
+    @if ($type == 'b') { @return #B4B4BF; }
+    @if ($type == 'c') { @return #CCCCD9; }
+    @if ($type == 'd') { @return #B4B4BF; }
 
     @if ($darker == 'true') {
-      @if ($type == 'e') { @return #1c1f26; }
-      @if ($type == 'f') { @return #1e222a; }
-      @if ($type == 'g') { @return #252a33; }
-      @if ($type == 'h') { @return #333a47; }
+      @if ($type == 'e') { @return #303033; }
+      @if ($type == 'f') { @return #48484D; }
+      @if ($type == 'g') { @return #303033; }
+      @if ($type == 'h') { @return #48484D; }
     } @else {
-      @if ($type == 'e') { @return #292e38; }
-      @if ($type == 'f') { @return #2b303b; }
-      @if ($type == 'g') { @return #313744; }
-      @if ($type == 'h') { @return #404859; }
+      @if ($type == 'e') { @return #303033; }
+      @if ($type == 'f') { @return #48484D; }
+      @if ($type == 'g') { @return #303033; }
+      @if ($type == 'h') { @return #48484D; }
     }
   } @else {
     @if ($type == 'a') { @return #FFFFFF; }
@@ -145,8 +145,8 @@ $indicator:                             theme(color);
 $titlebar-indicator:                    if($variant == 'dark', currentColor, $primary);
 $inverse-indicator:                     if($theme == 'default', white, $primary);
 $applet-primary:                        if($topbar == 'dark' and $theme == 'default' and $variant == 'light', #DDDDDD, $primary);
-$titlebar-primary:                      if($topbar == 'dark' and $theme == 'default' and $variant == 'light', if($color_type == 'stonerose', #dbdee5, #e0e0e0), $primary);
-$osd-primary:                           if($theme == 'default', if($color_type == 'stonerose', #dbdee5, #e0e0e0), $primary);
+$titlebar-primary:                      if($topbar == 'dark' and $theme == 'default' and $variant == 'light', if($color_type == 'stonerose', #B4B4BF, #e0e0e0), $primary);
+$osd-primary:                           if($theme == 'default', if($color_type == 'stonerose', #B4B4BF, #e0e0e0), $primary);
 
 $background:                            if($variant == 'light', background(a), background(g));
 $surface:                               if($variant == 'light', background(a), background(h));

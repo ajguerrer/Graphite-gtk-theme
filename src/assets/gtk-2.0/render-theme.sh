@@ -80,34 +80,34 @@ for type in '' '-stonerose'; do
   if [[ "$type" == '-stonerose' ]]; then
     case "$theme" in
       -purple)
-        theme_color='#b57daa'
+        theme_color='#AE9DBF'
         ;;
       -pink)
-        theme_color='#cd7092'
+        theme_color='#BF9BAE'
         ;;
       -red)
-        theme_color='#c35b65'
+        theme_color='#BF9D9D'
         ;;
       -orange)
-        theme_color='#d0846c'
+        theme_color='#BFAE9D'
         ;;
       -yellow)
-        theme_color='#e4b558'
+        theme_color='#BFAE9D'
         ;;
       -green)
-        theme_color='#82ac5d'
+        theme_color='#AEBF9D'
         ;;
       -teal)
-        theme_color='#83b9b8'
+        theme_color='#9DBFAE'
         ;;
       -blue)
-        theme_color='#5e81ac'
+        theme_color='#9DAEBF'
         ;;
       *)
         if [[ "$color" == '' ]]; then
-          theme_color='#434c5e'
+          theme_color='#B4B4BF'
         else
-          theme_color='#dbdee5'
+          theme_color='#B4B4BF'
         fi
         ;;
     esac

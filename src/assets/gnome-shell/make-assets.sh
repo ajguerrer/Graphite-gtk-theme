@@ -69,40 +69,40 @@ for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-
     if [[ "$type" == '-stonerose' ]]; then
       case "$theme" in
         '')
-          theme_color_dark='#434c5e'
-          theme_color_light='#dbdee5'
+          theme_color_dark='#B4B4BF'
+          theme_color_light='#B4B4BF'
           ;;
         -purple)
-          theme_color_dark='#b57daa'
-          theme_color_light='#c89dbf'
+          theme_color_dark='#AE9DBF'
+          theme_color_light='#AE9DBF'
           ;;
         -pink)
-          theme_color_dark='#cd7092'
-          theme_color_light='#dc98b1'
+          theme_color_dark='#BF9BAE'
+          theme_color_light='#BF9BAE'
           ;;
         -red)
-          theme_color_dark='#c35b65'
-          theme_color_light='#d4878f'
+          theme_color_dark='#BF9D9D'
+          theme_color_light='#BF9D9D'
           ;;
         -orange)
-          theme_color_dark='#d0846c'
-          theme_color_light='#dca493'
+          theme_color_dark='#BFAE9D'
+          theme_color_light='#BFAE9D'
           ;;
         -yellow)
-          theme_color_dark='#e4b558'
-          theme_color_light='#eac985'
+          theme_color_dark='#BFAE9D'
+          theme_color_light='#BFAE9D'
           ;;
         -green)
-          theme_color_dark='#82ac5d'
-          theme_color_light='#a0c082'
+          theme_color_dark='#AEBF9D'
+          theme_color_light='#AEBF9D'
           ;;
         -teal)
-          theme_color_dark='#63a6a5'
-          theme_color_light='#83b9b8'
+          theme_color_dark='#9DBFAE'
+          theme_color_light='#9DBFAE'
           ;;
         -blue)
-          theme_color_dark='#5e81ac'
-          theme_color_light='#89a3c2'
+          theme_color_dark='#9DAEBF'
+          theme_color_light='#9DAEBF'
           ;;
       esac
     fi
@@ -112,7 +112,7 @@ for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-
       cp -rf "theme" "theme${theme}${type}"
       sed -i "s/#333333/${theme_color_dark}/g" "theme${theme}${type}"/*.svg
       sed -i "s/#e0e0e0/${theme_color_light}/g" "theme${theme}${type}"/*.svg
-      sed -i "s/#2c2c2c/#313744/g" "theme${theme}"/*.svg
+      sed -i "s/#2c2c2c/#303033/g" "theme${theme}"/*.svg
     elif [[ "$theme" != '' ]]; then
       rm -rf "theme${theme}"
       cp -rf "theme" "theme${theme}"
